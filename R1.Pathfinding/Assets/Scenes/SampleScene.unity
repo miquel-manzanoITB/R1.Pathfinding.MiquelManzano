@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -211,6 +212,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
+  m_Version: 2
 --- !u!1 &1495351872
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495351874}
   - component: {fileID: 1495351873}
+  - component: {fileID: 1495351875}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -242,7 +288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Size: 8
   Panel: {fileID: 1593313577}
-  token: {fileID: 762362213633481467, guid: d17134a25efa0974991a0fb2f9cab3f0, type: 3}
+  token: {fileID: 4746538311792879036, guid: ef47858933b284244bbde231c6466ac1, type: 3}
+  startToken: {fileID: 5833628856094141826, guid: 2dc6388526a0edb4da8d9bf69e27fded, type: 3}
+  endToken: {fileID: 1945311962344259135, guid: 0bd5d0084bc3ca74682fced1890a2f43, type: 3}
+  pathFinding: {fileID: 1495351875}
 --- !u!4 &1495351874
 Transform:
   m_ObjectHideFlags: 0
@@ -258,6 +307,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1495351875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495351872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2b766649639da04bb64bcc0ba8be1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PathFinding
+  closedListToken: {fileID: 5016315767694069184, guid: b54e04d0659a49f4981370df77da1393, type: 3}
+  finalPathToken: {fileID: 5570036535819701464, guid: 0784d3ab9ccbc1740991affdec789b7b, type: 3}
+  stepDelay: 1
 --- !u!1 &1593313576
 GameObject:
   m_ObjectHideFlags: 0
